@@ -1,103 +1,166 @@
-import Image from "next/image";
+"use client"
+import { Navbar } from "@/components/navbar"
+import { CarouselContainer } from "@/components/CarouselContainer"
+import { Footer } from "@/components/Footer"
+import { CardContainer } from "@/components/CardContainer"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { Cards } from "@/components/Cards"
+import { useState } from "react"
+import { MovieType } from "@/lib/types"
+import { url } from "inspector"
+const Home= ()=>{
+const [movies, setMovies] = useState<MovieType[]>();
+ 
+     const card1: MovieType[]= [
+      {
+        
+        text: "Ornella Binni",
+       image: ["/slide1.png"],
+      },
+      {
+        text: "Tom Byrom",
+       image: ["/slide2.png"],
+      },
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide3.png"],
+      },
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide4.png"],
+      },
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide5.png"],
+      },
+  
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide6.png"],
+      },
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide7.png"],
+      },
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide8.png"],
+      },
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide9.png"],
+      },
+      {
+        text: "Vladimir Malyavko",
+       image: ["/slide10.png"],
+      },
+    ]
+    const card2: MovieType[]= [
+        {
+          text: "Ornella Binni",
+         image: ["https://images.unsplash.com/photo-1465869185982-5a1a7522cbcb?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Tom Byrom",
+         image: ["https://images.unsplash.com/photo-1548516173-3cabfa4607e9?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+            text: "Vladimir Malyavko",
+           image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+          },
+          {
+            text: "Vladimir Malyavko",
+           image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+          },
+      
+      ]
+      const card3: MovieType[]= [
+        {
+          text: "Ornella Binni",
+         image: ["https://images.unsplash.com/photo-1465869185982-5a1a7522cbcb?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Tom Byrom",
+         image: ["https://images.unsplash.com/photo-1548516173-3cabfa4607e9?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+          text: "Vladimir Malyavko",
+         image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+        },
+        {
+            text: "Vladimir Malyavko",
+           image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+          },
+          {
+            text: "Vladimir Malyavko",
+           image: ["https://images.unsplash.com/photo-1494337480532-3725c85fd2ab?auto=format&fit=crop&w=300&q=80"],
+          },
+      
+      ]
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+return(
+    <ScrollArea className=" flex flex-col text-center justify-center items-center">
+    <Navbar></Navbar>
+    <div className="mt-10 flex w-full flex-col justify-center "> 
+    <CarouselContainer/>
     </div>
-  );
+    <div className="flex flex-col gap-[52px]">
+  
+<CardContainer  movies={card1}/>
+ <CardContainer movies={card2}/>
+<CardContainer  movies={card3}/>
+    </div>
+
+
+
+
+<Footer></Footer>
+    </ScrollArea>
+)
 }
+export default Home
