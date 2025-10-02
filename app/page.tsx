@@ -2,12 +2,13 @@
 import { Navbar } from "@/components/navbar"
 import { CarouselContainer } from "@/components/CarouselContainer"
 import { Footer } from "@/components/Footer"
-import { CardContainer } from "@/components/CardContainer"
+import { MovieList } from "@/components/MovieList"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Cards } from "@/components/Cards"
 import { useState } from "react"
 import { MovieType } from "@/lib/types"
 import { url } from "inspector"
+
 const Home= ()=>{
 const [movies, setMovies] = useState<MovieType[]>();
  
@@ -144,23 +145,23 @@ const [movies, setMovies] = useState<MovieType[]>();
 
 
 return(
-    <ScrollArea className=" flex flex-col text-center justify-center items-center">
-    <Navbar></Navbar>
-    <div className="mt-10 flex w-full flex-col justify-center "> 
-    <CarouselContainer/>
-    </div>
-    <div className="flex flex-col gap-[52px]">
-  
-<CardContainer  movies={card1}/>
- <CardContainer movies={card2}/>
-<CardContainer  movies={card3}/>
-    </div>
 
 
-
-
-<Footer></Footer>
-    </ScrollArea>
+  <ScrollArea className="flex flex-col justify-center items-center w-full">
+    <div className="justify-center flex-col flex items-center">
+  <Navbar />
+  </div>
+  <div className="mt-10 w-[2255px]  flex flex-col ">
+    <CarouselContainer />
+  </div>
+  <div className="flex mt-10 flex-col gap-12 w-full">
+    <MovieList text="Upcoming" movies={card1} />
+    <MovieList text="Popular" movies={card2} />
+    <MovieList text="Top Rated" movies={card3} />
+  </div> 
+  <Footer />
+</ScrollArea>
+ 
 )
 }
 export default Home
