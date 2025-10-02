@@ -1,8 +1,7 @@
 import { Navbar } from "@/components/navbar";
-import { CardList2 } from "./_components/CardList2";
-import { card1 } from "@/lib/moviecard";
-import { GenreButton } from "@/components/GenreButton";
 import { CarouselContainer2 } from "./_components/CarouselContainer2";
+import { Genrelist } from "@/components/Genrelist";
+import { genre1 } from "@/lib/moviecard";
 const Page = () => {
   return (
     <div>
