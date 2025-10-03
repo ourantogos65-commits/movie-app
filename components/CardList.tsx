@@ -16,7 +16,11 @@ export const CardList = ({ movies, text }: Props) => {
 
       <div className="grid grid-cols-6   gap-6 w-full  p-[8px] ">
         {movies.map((movie) => (
-          <Cards className="w-[300px] h-[439px]" movie={movie}></Cards>
+          <Cards
+            className1="w-full h-[340px]"
+            className="w-[300px] h-[439px]"
+            movie={movie}
+          ></Cards>
         ))}
       </div>
     </div>

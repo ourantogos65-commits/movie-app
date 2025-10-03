@@ -2,16 +2,16 @@ import { MovieType } from "@/lib/types";
 import { cn } from "@/lib/utils";
 type Props = {
   className: string;
-
+  className1: string;
   movie: MovieType;
 };
-export const Cards = ({ movie, className }: Props) => {
+export const Cards = ({ movie, className, className1 }: Props) => {
   return (
     <div className={cn("overflow-hidden bg-amber-200 rounded-2xl", className)}>
       <img
         src={movie.image[0]}
         alt={`Photo by ${movie.text}`}
-        className="w-full "
+        className={cn(className1)}
       />
       <div className="bg-gray-300 h-40 p-3">
         <div className="flex bg-cover text-black shrink-0 gap-2">

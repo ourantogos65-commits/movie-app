@@ -1,10 +1,12 @@
 import { Navbar } from "@/components/navbar";
-
+import { MoviePoster } from "./_components/MoviePoster";
 const Page = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="bg-gray-200"></div>
+      <div>
+        <MoviePoster />
+      </div>
     </div>
   );
 };

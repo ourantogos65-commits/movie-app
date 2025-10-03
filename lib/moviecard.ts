@@ -1,4 +1,4 @@
-import { GenreType, MovieType } from "./types";
+import { GenreType, MovieType, Postertype } from "./types";
 
 export const card1: MovieType[] = [
   {
@@ -173,24 +173,97 @@ export const genre1: GenreType[] = [
     text: "Action",
   },
   {
-    text: "Action",
+    text: "Adventure",
   },
   {
-    text: "Action",
+    text: "Animation",
   },
   {
-    text: "Action",
+    text: "Biography",
   },
   {
-    text: "Action",
+    text: "Comedy ",
   },
   {
-    text: "Action",
+    text: "Crime ",
   },
   {
-    text: "Action",
+    text: "Documentary ",
   },
   {
-    text: "Action",
+    text: "Drama",
+  },
+  {
+    text: "Family ",
+  },
+  {
+    text: "Fantasy ",
+  },
+  {
+    text: "Film-noir ",
+  },
+  {
+    text: "Game",
+  },
+  {
+    text: "History ",
+  },
+  {
+    text: "Horror ",
+  },
+  {
+    text: "Music ",
+  },
+  {
+    text: "Musical",
+  },
+  {
+    text: "Mystery",
+  },
+  {
+    text: "News ",
+  },
+  {
+    text: "Reality-TV ",
+  },
+  {
+    text: "Romance",
+  },
+  {
+    text: "Reality-TV ",
+  },
+  {
+    text: "Sci-FI",
+  },
+  {
+    text: "Short ",
+  },
+  {
+    text: "Sport ",
+  },
+  {
+    text: "Talk-Show",
+  },
+  {
+    text: "Thriller ",
+  },
+  {
+    text: "War ",
+  },
+  {
+    text: "Western ",
   },
 ];
+
+export const postertype: Postertype = {
+  title: "Wicked",
+  releaseDate: "2024.11.26",
+  ratingCode: "PG",
+  duration: "2h 40m",
+  rating: 6.9,
+  votes: "37k",
+  p: "A reimagined story from the Land of Oz...",
+  director: "Jon M. Chu",
+  writes: "Winnie Holzman",
+  stars: "Ariana Grande, Cynthia Erivo, Jeff Goldblum",
+};

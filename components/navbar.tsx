@@ -27,25 +27,17 @@ export const Navbar = () => {
             <DropdownMenuTrigger className="px-3 py-1 bg-white rounded-md shadow hover:bg-gray-100 transition">
               Genre
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="ml-80 mt-4">
               <DropdownMenuLabel>
-                <img
-                  src="./genre1.png"
-                  alt="Genre"
-                  className="w-12 h-12 rounded-md"
-                />
-                <div>
-                  <h3 className="font-semibold text-gray-800">Wicked</h3>
-                  <p className="text-gray-500 text-sm">2024</p>
-                </div>
+                <h1 className="text-2xl">Genres</h1>
+                <p className="text-gray-600 text-lg">
+                  See list of movies by genre
+                </p>
               </DropdownMenuLabel>
               <DropdownMenuSeparator className="my-2" />
               <DropdownMenuItem>
                 <Genrelist genres={genre1} />
               </DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
-              <DropdownMenuItem>Team</DropdownMenuItem>
-              <DropdownMenuItem>Subscription</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 

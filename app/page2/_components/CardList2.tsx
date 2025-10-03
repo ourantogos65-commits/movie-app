@@ -17,7 +17,11 @@ export const CardList2 = ({ movies, text }: Props) => {
 
         <div className="gap-[8px] grid grid-cols-5 ">
           {movies.map((movie) => (
-            <Cards className="w-[290px] h-[493px]" movie={movie}></Cards>
+            <Cards
+              className1="w-[229px] h-340px "
+              className="w-[229px] h-[439px]"
+              movie={movie}
+            ></Cards>
           ))}
         </div>
         <div className="flex "></div>
