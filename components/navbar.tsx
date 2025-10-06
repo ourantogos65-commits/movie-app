@@ -36,7 +36,7 @@ export const Navbar = () => {
               </DropdownMenuLabel>
               <DropdownMenuSeparator className="my-2" />
               <DropdownMenuItem>
-                <Genrelist genres={genre1} />
+                <Genrelist text="jdfk" genres={genre1} />
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
