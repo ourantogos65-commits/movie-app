@@ -1,4 +1,4 @@
-import { GenreType, MovieType, Postertype } from "./types";
+import { GenreType, GenreType2, MovieType, Postertype } from "./types";
 
 export const genre1: GenreType[] = [
   {
@@ -86,16 +86,3 @@ export const genre1: GenreType[] = [
     text: "Western ",
   },
 ];
-
-export const postertype: Postertype = {
-  title: "Wicked",
-  releaseDate: "2024.11.26",
-  ratingCode: "PG",
-  duration: "2h 40m",
-  rating: 6.9,
-  votes: "37k",
-  p: "A reimagined story from the Land of Oz...",
-  director: "Jon M. Chu",
-  writes: "Winnie Holzman",
-  stars: "Ariana Grande, Cynthia Erivo, Jeff Goldblum",
-};

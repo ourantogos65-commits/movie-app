@@ -9,7 +9,7 @@ import {
 export const CarouselContainer = () => {
   return (
     <Carousel>
-      <CarouselContent className="w-full  h-[700px]    bg-center  p ">
+      <CarouselContent className="w-full   h-[700px]    bg-center  p ">
         <CarouselItem className="bg-[url(/movie1.jpg)] bg-cover text-white ">
           <DescriptionBox
             texth1="Wicked"

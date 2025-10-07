@@ -1,6 +1,5 @@
 import { MovieType } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { Key } from "lucide-react";
 
 type Props = {
   movies: MovieType[];
@@ -10,14 +9,14 @@ type Props = {
 };
 export const CardList = ({ movies, text, className, className1 }: Props) => {
   return (
-    <div className=" w-full    p-10">
-      <div className="flex  ml-5 justify-between w-full">
+    <div className=" w-full   p-5">
+      <div className="flex mb-[32px]  justify-between flex-wrap">
         <p className="text-black   text-2xl">{text}</p>
-        <button>See more</button>
+        <button>See more →</button>
       </div>
 
-      <div className="flex flex-wrap ml-10  gap-6 w-full  p-[8px] ">
-        {movies?.map((movie) => (
+      <div className="flex flex-wrap   gap-6 w-full   ">
+        {movies?.slice(0, 10).map((movie) => (
           <div className={cn(" overflow-hidden rounded-2xl ", className)}>
             <img
               key={movie.id}

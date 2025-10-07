@@ -29,3 +29,8 @@ export type Postertype = {
   writes: string;
   stars: string;
 };
+export type GenreType2 = {
+  image: string;
+  title: string;
+  date: number;
+};

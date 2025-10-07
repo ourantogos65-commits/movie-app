@@ -31,22 +31,22 @@ async function Home() {
         <div className="mt-10 w-full flex flex-col ">
           <CarouselContainer />
         </div>
-        <div className="overflow-auto flex mt-10 flex-col gap-12 w-full">
+        <div className="overflow-auto flex mt-10 flex-col  w-full">
           <CardList
             className1="w-full h-[340px]"
-            className="w-[300px] h-[439px]"
+            className="w-[230px] h-[439px]"
             movies={popularMovieData.results}
             text="Upcoming"
           />
           <CardList
             className1="w-full h-[340px]"
-            className="w-[300px] h-[439px]"
+            className="w-[230px] h-[439px]"
             movies={upcomingMovieData.results}
             text="Popular"
           />
           <CardList
             className1="w-full h-[340px]"
-            className="w-[300px] h-[439px]"
+            className="w-[230px] h-[439px]"
             movies={topRatedMovieData.results}
             text="Top Rated"
           />

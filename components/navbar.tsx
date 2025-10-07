@@ -41,7 +41,7 @@ export const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Input className="w-60" />
+          <Input className="w-80" />
         </div>
 
         <ModeToggle />

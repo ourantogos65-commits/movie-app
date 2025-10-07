@@ -16,7 +16,7 @@ export const Genrelist = ({ genres }: Props) => {
       <div className="gap-2 w-full flex-wrap flex p-[8px]">
         {genres.map((genre) => (
           <div className="pb-2">
-            <button className="border  flex gap-0.5  justify-center px-1.5 rounded-lg text-black  font-semibold">
+            <button className="border  border-gray-200 flex gap-0.5  justify-center px-1.5 rounded-lg text-black  font-semibold">
               <p>{genre.text}</p>
               <img src="/chevron-right.svg" alt="" />
             </button>
