@@ -34,3 +34,12 @@ export type GenreType2 = {
   title: string;
   date: number;
 };
+
+export type MovieDetailProps = {
+  movie: MovieType;
+  credits: {
+    director: string;
+    writers: string;
+    stars: string[];
+  };
+};

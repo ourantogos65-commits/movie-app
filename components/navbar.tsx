@@ -12,14 +12,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import Link from "next/link";
 export const Navbar = () => {
   return (
     <nav className="mt-5 w-full h-[52px] rounded-lg flex border shadow-lg justify-center items-center">
       <div className="flex  w-[1600px]  justify-between items-center  ">
         <div className="flex  items-center gap-3">
-          <img src="./film.svg" alt="Logo" className="w-8 h-8" />
-          <p className="text-indigo-700 text-lg font-bold">Movie Z</p>
+          <img src="/film.svg" alt="Logo" className="w-8 h-8" />
+          <Link href={"/page3"} className="text-indigo-700 text-lg font-bold">
+            Movie Z
+          </Link>
         </div>
 
         <div className="flex items-center  gap-8">

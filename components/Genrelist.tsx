@@ -12,7 +12,6 @@ export const Genrelist = ({ genres }: Props) => {
       <div className="flex  ml-5 justify-between w-full">
         <p className="text-black  text-2xl">dbh</p>
       </div>
-
       <div className="gap-2 w-full flex-wrap flex p-[8px]">
         {genres.map((genre) => (
           <div className="pb-2">

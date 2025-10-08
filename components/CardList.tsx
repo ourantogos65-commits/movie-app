@@ -1,37 +1,29 @@
 import { MovieType } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { Card } from "./Card";
+
+import Link from "next/link";
 
 type Props = {
   movies: MovieType[];
   text: string;
-  className: string;
-  className1: string;
 };
-export const CardList = ({ movies, text, className, className1 }: Props) => {
+
+export const CardList = ({ movies, text }: Props) => {
   return (
-    <div className=" w-full   p-5">
-      <div className="flex mb-[32px]  justify-between flex-wrap">
+    <div className=" w-full    p-10">
+      <div className="flex  ml-5 justify-between w-full">
         <p className="text-black   text-2xl">{text}</p>
-        <button>See more →</button>
+        <Link href="/page2">See more</Link>
       </div>
 
-      <div className="flex flex-wrap   gap-6 w-full   ">
-        {movies?.slice(0, 10).map((movie) => (
-          <div className={cn(" overflow-hidden rounded-2xl ", className)}>
-            <img
-              key={movie.id}
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              alt={`Photo by ${movie.title}`}
-              className={cn(className1)}
-            />
-            <div className="bg-gray-300 h-40 p-3">
-              <div className="flex bg-cover text-black shrink-0 gap-2">
-                <img src="./star.svg" alt="" className="w-5" />
-                <p>6.9/10</p>
-              </div>
-              <p className=" text-black font-semibold">{movie.title}</p>
-            </div>
-          </div>
+      <div className="flex flex-wrap ml-10  gap-6 w-full  p-[8px] ">
+        {movies?.splice(0, 10).map((movie) => (
+          <Card
+            key={movie.id}
+            movie={movie}
+            className1="w-full h-[340px]"
+            className="w-[229px] h-[439px]"
+          />
         ))}
       </div>
     </div>

@@ -1,13 +1,40 @@
 import { Navbar } from "@/components/navbar";
-import { MoviePoster } from "./_components/MoviePoster";
-const Page = () => {
+import { CarouselContainer } from "@/components/CarouselContainer";
+import { Footer } from "@/components/Footer";
+import { CardList } from "@/components/CardList";
+import { axiosInstance } from "@/lib/utils";
+
+async function Home() {
+  const getMovies = async (category: string) => {
+    const response = await axiosInstance.get(
+      `/movie/${category}?language=en-US`
+    );
+
+    return response.data;
+  };
+  const nowplayingMovieData = await getMovies("now_playing");
+  const popularMovieData = await getMovies("popular");
+  const upcomingMovieData = await getMovies("upcoming");
+  const topRatedMovieData = await getMovies("top_rated");
+
   return (
-    <div>
-      <Navbar></Navbar>
-      <div>
-        <MoviePoster />
+    <>
+      <div className="flex flex-col justify-center items-center w-full">
+        <div className="justify-center  flex items-center">
+          <Navbar />
+        </div>
+        <div className="mt-10 w-full flex flex-col ">
+          {/* <CarouselContainer /> */}
+          <CarouselContainer movies={nowplayingMovieData.results} />
+        </div>
+        <div className="overflow-auto flex mt-10 flex-col  w-full">
+          <CardList movies={popularMovieData.results} text="Upcoming" />
+          <CardList movies={upcomingMovieData.results} text="Popular" />
+          <CardList movies={topRatedMovieData.results} text="Top Rated" />
+        </div>
+        <Footer />
       </div>
-    </div>
+    </>
   );
-};
-export default Page;
+}
+export default Home;
