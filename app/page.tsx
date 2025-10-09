@@ -24,21 +24,24 @@ async function Home() {
           <Navbar />
         </div>
         <div className="mt-10 w-full flex flex-col ">
-          <CarouselContainer movies={nowplayingMovieData.results} />
+          <CarouselContainer
+            isLoading={false}
+            movies={nowplayingMovieData.results}
+          />
         </div>
         <div className="overflow-auto flex mt-10 flex-col  w-full">
           <CardList
-            isLoading={false}
+            isLoad={false}
             movies={popularMovieData.results}
             text="Upcoming"
           />
           <CardList
-            isLoading={false}
+            isLoad={false}
             movies={upcomingMovieData.results}
             text="Popular"
           />
           <CardList
-            isLoading={false}
+            isLoad={false}
             movies={topRatedMovieData.results}
             text="Top Rated"
           />

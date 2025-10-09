@@ -53,7 +53,11 @@ async function Home() {
         </div>
 
         <div className="overflow-auto flex mt-10 flex-col  w-full">
-          <CardList movies={upcomingMovieData.results} text="Upcoming" />
+          <CardList
+            isLoad={true}
+            movies={upcomingMovieData.results}
+            text="Upcoming"
+          />
         </div>
         <Footer />
       </div>

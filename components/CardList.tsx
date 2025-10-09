@@ -1,25 +1,25 @@
 import { MovieType } from "@/lib/types";
 import { Card } from "./Card";
-
 import Link from "next/link";
 
 type Props = {
   movies: MovieType[];
   text: string;
-  isLoading: Boolean;
+  isLoad: Boolean;
 };
 
-export const CardList = ({ movies, text, isLoading }: Props) => {
-  if (isLoading === false) {
+export const CardList = ({ movies, text, isLoad }: Props) => {
+  if (isLoad === true) {
     return (
       <div className="w-full  items-center flex flex-col  p-10">
-        <div className="w-full bg-amber-300 flex justify-between">
-          <p></p>
-          <p></p>
+        <div className="w-full flex justify-between">
+          <p className="w-40 h-10 rounded-2xl bg-gray-200"></p>
+          <p className="w-40 h-10 rounded-2xl bg-gray-200"></p>
         </div>
         <div className="flex flex-wrap  justify-center gap-7 w-full  p-[9px] ">
           {movies?.splice(0, 10).map((movie) => (
             <Card
+              className3="w-[229px] h-[439px]"
               isLoading={false}
               key={movie.id}
               movie={movie}
@@ -35,12 +35,13 @@ export const CardList = ({ movies, text, isLoading }: Props) => {
       <div className="w-full  items-center flex flex-col  p-10">
         <div className="w-full  flex p-2 justify-between">
           <p className="font-bold text-2xl">{text}</p>
-          <p>see more</p>
+          <Link href={"/page2"}>see more</Link>
         </div>
         <div className="flex flex-wrap  justify-center gap-7 w-full  p-[9px] ">
           {movies?.splice(0, 10).map((movie) => (
             <Card
-              isLoading={true}
+              className3="w-[229px] h-[439px]"
+              isLoading={false}
               key={movie.id}
               movie={movie}
               className1="w-full h-[340px]"

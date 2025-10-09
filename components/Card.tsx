@@ -10,9 +10,16 @@ type Props = {
   className: string;
   className1: string;
   isLoading: Boolean;
+  className3: string;
 };
 
-export const Card = ({ movie, className, className1, isLoading }: Props) => {
+export const Card = ({
+  movie,
+  className,
+  className1,
+  isLoading,
+  className3,
+}: Props) => {
   const { title, poster_path, vote_average, id } = movie;
   const router = useRouter();
 
@@ -21,7 +28,7 @@ export const Card = ({ movie, className, className1, isLoading }: Props) => {
   };
   console.log(router);
   if (isLoading === true) {
-    return <div className="bg-gray-200 w-[230px] h-[439px] rounded-lg"></div>;
+    return <div className={cn(className3, "rounded-2xl bg-gray-200")}></div>;
   } else {
     return (
       <div>

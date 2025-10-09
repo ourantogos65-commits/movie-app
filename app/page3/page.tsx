@@ -25,12 +25,27 @@ async function Home() {
         </div>
         <div className="mt-10 w-full flex flex-col ">
           {/* <CarouselContainer /> */}
-          <CarouselContainer movies={nowplayingMovieData.results} />
+          <CarouselContainer
+            isLoading={false}
+            movies={nowplayingMovieData.results}
+          />
         </div>
         <div className="overflow-auto flex mt-10 flex-col  w-full">
-          <CardList movies={popularMovieData.results} text="Upcoming" />
-          <CardList movies={upcomingMovieData.results} text="Popular" />
-          <CardList movies={topRatedMovieData.results} text="Top Rated" />
+          <CardList
+            isLoad={false}
+            movies={popularMovieData.results}
+            text="Upcoming"
+          />
+          <CardList
+            isLoad={false}
+            movies={upcomingMovieData.results}
+            text="Popular"
+          />
+          <CardList
+            isLoad={false}
+            movies={topRatedMovieData.results}
+            text="Top Rated"
+          />
         </div>
         <Footer />
       </div>

@@ -13,7 +13,8 @@ export const CardlistTwo = ({ movies, text }: Props) => {
       <div className="flex flex-wrap  justify-center gap-7 w-full  p-[9px] ">
         {movies?.splice(0, 5).map((movie) => (
           <Card
-            isLoading={true}
+            className3="w-[190px]  h-[372px]"
+            isLoading={false}
             key={movie.id}
             movie={movie}
             className1="w-full h-[281px]"
