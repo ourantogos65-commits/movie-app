@@ -12,6 +12,7 @@ export type MovieType = {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  isLoading: boolean;
 };
 export type GenreType = {
   text: string;

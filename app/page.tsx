@@ -3,7 +3,7 @@ import { CarouselContainer } from "@/components/CarouselContainer";
 import { Footer } from "@/components/Footer";
 import { CardList } from "@/components/CardList";
 import { axiosInstance } from "@/lib/utils";
-
+import { MovieType } from "@/lib/types";
 async function Home() {
   const getMovies = async (category: string) => {
     const response = await axiosInstance.get(
@@ -24,13 +24,24 @@ async function Home() {
           <Navbar />
         </div>
         <div className="mt-10 w-full flex flex-col ">
-          {/* <CarouselContainer /> */}
           <CarouselContainer movies={nowplayingMovieData.results} />
         </div>
         <div className="overflow-auto flex mt-10 flex-col  w-full">
-          <CardList movies={popularMovieData.results} text="Upcoming" />
-          <CardList movies={upcomingMovieData.results} text="Popular" />
-          <CardList movies={topRatedMovieData.results} text="Top Rated" />
+          <CardList
+            isLoading={false}
+            movies={popularMovieData.results}
+            text="Upcoming"
+          />
+          <CardList
+            isLoading={false}
+            movies={upcomingMovieData.results}
+            text="Popular"
+          />
+          <CardList
+            isLoading={false}
+            movies={topRatedMovieData.results}
+            text="Top Rated"
+          />
         </div>
         <Footer />
       </div>
