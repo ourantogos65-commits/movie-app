@@ -9,17 +9,11 @@ type Props = {
   movie: MovieType;
   className: string;
   className1: string;
-  isLoading: Boolean;
+
   className3: string;
 };
 
-export const Card = ({
-  movie,
-  className,
-  className1,
-  isLoading,
-  className3,
-}: Props) => {
+export const Card = ({ movie, className, className1 }: Props) => {
   const { title, poster_path, vote_average, id } = movie;
   const router = useRouter();
 
@@ -27,33 +21,30 @@ export const Card = ({
     router.push(`/detail/${id}`);
   };
   console.log(router);
-  if (isLoading === true) {
-    return <div className={cn(className3, "rounded-2xl bg-gray-200")}></div>;
-  } else {
-    return (
-      <div>
-        <div
-          onClick={HandleClick}
-          className={cn("overflow-hidden rounded-2xl", className)}
-        >
-          <Image
-            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-            alt={`Poster of ${title}`}
-            width={500}
-            height={750}
-            className={cn(className1)}
-          />
-          <div className="bg-gray-300 h-40 p-3">
-            <div className="flex items-center text-black gap-2">
-              <img src="/star.svg" alt="Star" className="w-5" />
-              <p>
-                <span>{vote_average}</span>/10
-              </p>
-            </div>
-            <p className="text-black font-semibold">{title}</p>
+
+  return (
+    <div>
+      <div
+        onClick={HandleClick}
+        className={cn("overflow-hidden rounded-2xl ", className)}
+      >
+        <Image
+          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+          alt={`Poster of ${title}`}
+          width={500}
+          height={750}
+          className={cn(className1)}
+        />
+        <div className="bg-gray-300 h-40 p-3">
+          <div className="flex items-center text-black gap-2">
+            <img src="/star.svg" alt="Star" className="w-5" />
+            <p>
+              <span>{vote_average}</span>/10
+            </p>
           </div>
+          <p className="text-black font-semibold">{title}</p>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 };

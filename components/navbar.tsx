@@ -3,7 +3,7 @@
 import { ModeToggle } from "./Mode-toggle";
 import { Input } from "./ui/input";
 import { Genrelist } from "./Genrelist";
-import { genre1 } from "@/lib/moviecard";
+import { movieGenres } from "@/lib/moviecard";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,7 +16,7 @@ import Link from "next/link";
 export const Navbar = () => {
   return (
     <nav className="mt-5 w-full h-[52px] rounded-lg flex border shadow-lg justify-center items-center">
-      <div className="flex  w-[1600px]  justify-between items-center  ">
+      <div className="flex  w-full  justify-between items-center  ">
         <div className="flex  items-center gap-3">
           <img src="/film.svg" alt="Logo" className="w-8 h-8" />
           <Link href={"/page3"} className="text-indigo-700 text-lg font-bold">
@@ -38,7 +38,7 @@ export const Navbar = () => {
               </DropdownMenuLabel>
               <DropdownMenuSeparator className="my-2" />
               <DropdownMenuItem>
-                <Genrelist text="jdfk" genres={genre1} />
+                <Genrelist text="jdfk" genres={movieGenres} />
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

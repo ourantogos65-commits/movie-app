@@ -1,4 +1,4 @@
-import { genre1 } from "@/lib/moviecard";
+import { movieGenres } from "@/lib/moviecard";
 import { Genrelist } from "@/components/Genrelist";
 import { MovieType } from "@/lib/types";
 export const Page = () => {
@@ -7,7 +7,7 @@ export const Page = () => {
       <Genrelist
         // classname=" w-[500px] h-[600px] "
         // classname1="grid grid-cols-4   gap-2   p-[8px]"
-        genres={genre1}
+        genres={movieGenres}
         text="hus"
       />
     </div>

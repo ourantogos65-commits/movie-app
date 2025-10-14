@@ -16,6 +16,7 @@ export type MovieType = {
 };
 export type GenreType = {
   text: string;
+  id: number;
 };
 
 export type Postertype = {

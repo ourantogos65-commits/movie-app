@@ -1,5 +1,7 @@
 import { MovieType } from "@/lib/types";
 import { getImageUrl } from "@/lib/utils";
+import ReactPlayer from "react-player";
+import { TrailerModals } from "./TrailerModals";
 
 type Props = {
   movie: MovieType;
@@ -41,7 +43,11 @@ export const MovieDetail = ({ movie }: Props) => {
             width: "760px",
             height: "428px",
           }}
-        ></div>
+        >
+          <div className="mt-[370px] ml-5 ">
+            <TrailerModals />
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col  gap-3 w-[1070px]">

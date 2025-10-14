@@ -1,9 +1,11 @@
+import { TrailerModals } from "./TrailerModals";
 type Texttype = {
   texth2: string;
   texth1: string;
   textp: string;
   vo: number;
 };
+
 export const DescriptionBox = ({ texth2, texth1, textp, vo }: Texttype) => {
   return (
     <div className="w-[404px] mr-[896px] mt-[178px] ml-[140px] gap-10   flex flex-col    ">
@@ -19,9 +21,7 @@ export const DescriptionBox = ({ texth2, texth1, textp, vo }: Texttype) => {
       </div>
 
       <p className="text-xs">{textp} </p>
-      <button className="w-[145px] h-[40px] rounded-2xl text-black bg-white">
-        Watch Trailer
-      </button>
+      <TrailerModals />
     </div>
   );
 };
