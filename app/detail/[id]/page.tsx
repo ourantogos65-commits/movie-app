@@ -6,8 +6,13 @@ import { Footer } from "@/components/Footer";
 import ReactPlayer from "react-player";
 
 const DetailsPage = async ({ params: { id } }: { params: { id: string } }) => {
-  const response = await axiosInstance.get(`/movie/${id}?language=en-US`);
-  const movie = response.data;
+  let movie: any = null;
+  try {
+    const response = await axiosInstance.get(`/movie/${id}?language=en-US`);
+    movie = response.data;
+  } catch (error) {
+    console.error("movie fetch error:", error);
+  }
 
   const getMovies = async (category: string) => {
     const response = await axiosInstance.get(

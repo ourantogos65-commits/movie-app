@@ -1,7 +1,9 @@
 import { MovieType } from "@/lib/types";
 import { Card } from "./Card";
 import Link from "next/link";
-
+import useSWR from "swr";
+import { Skeleton } from "./ui/skeleton";
+import { Skeletonpage } from "./Skeleton";
 type Props = {
   movies: MovieType[];
   text: string;
@@ -16,6 +18,7 @@ export const CardList = ({ movies, text }: Props) => {
       </div>
       <div className="flex flex-wrap  justify-center gap-7 w-full  p-[9px] ">
         {movies?.splice(0, 10).map((movie) => (
+          
           <Card
             className3="w-[229px] h-[439px]"
             key={movie.id}

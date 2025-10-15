@@ -16,6 +16,7 @@ type Props = {
 export const CarouselContainer = ({ movies }: Props) => {
   return (
     <Carousel
+      opts={{ loop: true }}
       plugins={[
         Autoplay({
           delay: 2000,
